@@ -44,6 +44,8 @@ function validarEdad(edad) {
     $("#modal-menor").modal("show");
     var formulario = document.getElementById("customer");
     formulario.parentNode.removeChild(formulario);
+    $("#bottles").hide();
+    $("#pedidos").hide();
   }
 }
 
