@@ -5,6 +5,7 @@ body {
   font-weight: 600;
   margin: 0px;
 }
+
 header {
   background-color: rgb(129, 254, 2);
   display: flex;
@@ -12,33 +13,40 @@ header {
   color: black;
   padding-bottom: 10px;
 }
+
 .modal-header {
   background-color: rgb(129, 254, 2);
   color: black;
 }
+
 .modal-title {
   font-size: 1.5rem;
 }
+
 .modal-body {
   font-size: 1.5rem;
   display: flex;
   justify-content: center;
 }
+
 .modal-content {
   background-color: rgb(19, 18, 18);
   color: rgb(129, 254, 2);
   border: 1px solid;
 }
+
 .btn {
   background-color: rgb(129, 254, 2);
   color: black;
   border: 1px solid rgb(129, 254, 2);
 }
+
 .btn:hover {
   background-color: rgb(83, 141, 24);
   border: 1px solid rgb(83, 141, 24);
   color: black;
 }
+
 .container,
 .container-fluid,
 .row {
@@ -57,6 +65,7 @@ header {
   align-self: center;
   padding-bottom: 10px;
 }
+
 .logo-leyend1 {
   align-self: center;
 }
@@ -65,6 +74,7 @@ header {
   display: flex;
   justify-content: center;
 }
+
 .logo-leyend2 {
   display: flex;
   justify-content: center;
@@ -74,11 +84,13 @@ header {
   header {
     padding-bottom: 10px;
   }
+
   .logo-1 {
     justify-content: center;
     align-self: center;
     padding-bottom: 10px;
   }
+
   .logo-leyend1 {
     align-self: center;
   }
@@ -87,18 +99,22 @@ header {
     display: flex;
     justify-content: center;
   }
+
   .logo-leyend2 {
     display: flex;
     justify-content: center;
   }
 }
+
 .anim {
   transition: transform 1s ease-out;
   color: rgb(215, 223, 145);
 }
+
 .anim:hover {
   transform: scale(1.3);
 }
+
 .menu {
   color: rgb(129, 254, 2);
   padding: 0px;
@@ -111,6 +127,7 @@ header {
   animation-iteration-count: infinite;
   animation-name: animat;
 }
+
 @keyframes animat {
   0% {
     color: rgb(215, 223, 145);
@@ -124,13 +141,13 @@ header {
   box-sizing: content-box;
   background: url(../img/galaxy-image.png) no-repeat;
   background-size: cover;
-  /* border: 1px solid rgb(19, 18, 18); */
   box-shadow: grey;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0px;
 }
+
 .main-image h1 {
   text-align: center;
   font-weight: 800;
@@ -138,6 +155,7 @@ header {
   margin-bottom: 0px;
   margin-top: 10px;
 }
+
 .main-image p {
   text-align: center;
   font-size: 1.5em;
@@ -157,8 +175,6 @@ header {
 .shop {
   background-color: rgb(129, 254, 2);
   color: black;
-  /*padding-top: 5px;
-  padding-bottom: 5px;*/
   margin-top: 4px;
   margin-bottom: 10px;
   box-shadow: rgb(66, 70, 66);
@@ -167,14 +183,17 @@ header {
   max-width: 90px;
   min-width: 80px;
 }
+
 .product-name {
   font-size: 1.5em;
   color: rgb(172, 169, 166);
 }
+
 .price {
   font-size: 2.5em;
   color: rgb(204, 158, 9);
 }
+
 .description {
   height: 300px;
   display: flex;
@@ -187,6 +206,7 @@ header {
   .column-1 {
     text-align: right;
   }
+
   .column-2 {
     text-align: left;
   }
@@ -201,6 +221,7 @@ header {
   animation-iteration-count: infinite;
   animation-name: blink;
 }
+
 @keyframes blink {
   0% {
     opacity: 0.4;
@@ -213,6 +234,7 @@ header {
 .contact-card {
   text-align: center;
 }
+
 .form {
   display: flex;
   flex-direction: column;
@@ -228,17 +250,20 @@ header {
   border-radius: 5px;
   background-color: rgb(206, 202, 197);
 }
+
 select {
   font-size: 20px;
   padding: 5px;
   background-color: hsl(33, 8%, 79%);
   max-width: 240px;
 }
+
 input {
   font-size: 20px;
   padding: 5px;
   width: 240px;
 }
+
 .campoNumerico {
   width: 240px;
   background-color: #cecac5;
@@ -265,19 +290,19 @@ input {
 .buton {
   background-color: rgb(129, 254, 2);
   color: black;
-  /*padding-top: 5px;
-  padding-bottom: 5px;*/
   margin-top: 4px;
   box-shadow: rgb(66, 70, 66);
   border-radius: 5px;
   font-weight: bold;
 }
+
 .info-cliente {
   border: 1px solid rgb(19, 18, 18);
   text-align: center;
   font-size: 2em;
   margin-bottom: 30px;
 }
+
 .boton {
   display: flex;
   justify-content: center;
@@ -299,32 +324,39 @@ input {
   width: 200px;
   align-self: center;
 }
+
 .pedido-final {
   display: flex;
   justify-content: center;
   margin-top: 10px;
 }
+
 .finalizar-pedido {
   width: 80%;
   background-color: #1f1d1d;
   color: rgb(215, 223, 145);
 }
+
 .total {
   color: rgb(129, 254, 2);
   font-size: 20px;
 }
+
 .monto {
   color: rgb(129, 254, 2);
   font-size: 20px;
 }
+
 .items {
   color: rgb(129, 254, 2);
   font-size: 18px;
 }
+
 .icono-eliminar {
   color: red;
   cursor: pointer;
 }
+
 .finalizar {
   height: 50px;
   background-color: rgb(129, 254, 2);
@@ -335,6 +367,7 @@ input {
   border-radius: 5px;
   font-weight: bold;
 }
+
 .form-cliente {
   padding-top: 10px;
   margin-bottom: 10px;
