@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Bungee+Outline&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <title>El mono Galactico</title>
+</head>
+
+<body>
+  <!-- MODAL VALIDAR EDAD -->
+  <div class="modal" id="modal-edad" data-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Ingrese su edad</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Edad: <input type="text" id="validar-edad" class="campoNumerico">
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" onclick="guardarEdad()">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL MENOR DE EDAD -->
+  <div class="modal" id="modal-menor" data-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Menor de edad</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Eres menor de edad, vuelve cuando tengas 18!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL CONFIRMAR PEDIDO -->
+  <div class="modal" id="modal-pedido" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Confirmación de Pedido</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p id="detalle-pedido"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container logos">
+      <div class="row">
+        <div class="col-sm logo-leyend2">
+          <img class="img-fluid logo logo-1" src="./img/logo-mono.jpg">
+        </div>
+        <div class="col-sm logo-leyend1">
+          <img class="img-fluid logo logo-2" src="./img/brevajes1.jpg">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="content-section">
+    <div class=" container-fluid main-image" id="mono">
+      <h1 class="anim">DELIVERY DE BEBIDAS</h1>
+
+      <p class="lead" id="terr">Terrícolas! Nuestra conquista continúa, llevandoles a su hogar los mejores brebajes de
+        la Galaxia, con los precios mas bajos del mercado y entregados en la puerta de tu casa a la velocidad de la luz!
+        Pasen a deleitarse con este tour intergaláctico... </p>
+      <div class="boton">
+        <button class="button-p" id="pedidos">PEDÍ TU BREBAJE</button>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row bottles" id="bottles">
+
+      </div>
+    </div>
+    <div class="customer" id="customer">
+      <h1>HAGA SU PEDIDO</h1>
+      <div class="form">
+        <div class=" container-fluid delivery">
+          <div class="row">
+            <div class="col-sm column-1">
+              Seleccione su Brebaje:
+            </div>
+            <div class="col-sm column-2">
+              <select name='producto' id="brebajes" onchange="agregarPrecio()"></select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm column-1">
+              Cantidad:
+            </div>
+            <div class="col-sm column-2">
+              <input type="text" id="cantidad" class="campoNumerico" onkeyup="calcularSubtotal()">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm column-1">
+              Precio:
+            </div>
+            <div class="col-sm column-2">
+              <input type="text" id="precio" class="campoNumerico" disabled>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm column-1">
+              Subtotal:
+            </div>
+            <div class="col-sm column-2">
+              <input type="text" id="subtotal" class="campoNumerico" disabled>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm column-1">
+            </div>
+            <div class="col-sm column-2">
+              <div class="error" id="error"></div>
+              <button class="agregar" onclick="agregarProducto()">AGREGAR</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pedido-final" id="pedido-final"></div>
+    <div class="form-cliente container-fluid form" id="form-cliente"></div>
+  </section>
+</body>
+
+<script src="./assets/jquery/jquery-3.5.1.min.js"></script>
+<script src="./js/datos.js"></script>
+<script src="./js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</html>
