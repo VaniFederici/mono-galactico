@@ -238,6 +238,9 @@ header {
 .contact-card {
   text-align: center;
 }
+.delivery {
+  text-align: center;
+}
 
 .form {
   display: flex;
@@ -299,7 +302,9 @@ input {
   border-radius: 5px;
   font-weight: bold;
 }
-
+.form-cliente {
+  text-align: center;
+}
 .info-cliente {
   border: 1px solid rgb(19, 18, 18);
   text-align: center;
