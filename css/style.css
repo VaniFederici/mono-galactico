@@ -212,6 +212,10 @@ header {
   }
 }
 
+.customer {
+  padding-top: 20px;
+}
+
 .customer h1 {
   font-size: 3em;
   text-align: center;
@@ -306,6 +310,7 @@ input {
 .boton {
   display: flex;
   justify-content: center;
+  padding-bottom: 20px;
 }
 
 .button-p {
